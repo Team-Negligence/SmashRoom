@@ -61,6 +61,7 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+
 # Crashlytics generated file
 crashlytics-build.properties
 
@@ -74,3 +75,8 @@ crashlytics-build.properties
 # macOS Funky Files
 .DS_Store
 .vsconfig
+
+# Debugging info
+Quest_BackUpThisFolder_ButDontShipItWithYourGame
+Quest_BurstDebugInformation_DoNotShip
+
