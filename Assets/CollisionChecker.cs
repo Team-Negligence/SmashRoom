@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionChecker : MonoBehaviour
 {
     public float health;
+    public GameObject destroyedVersion;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,15 @@ public class CollisionChecker : MonoBehaviour
     {
         if(obj.gameObject.tag == "Weapon")
         {
-            health = health- 10f;
+            DestroyCurrentObject();
+            health = health - 10f;
         }
+    }
+
+    // Replace the current object with the destroyed version
+    private void DestroyCurrentObject()
+    {
+        Instantiate(destroyedVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
