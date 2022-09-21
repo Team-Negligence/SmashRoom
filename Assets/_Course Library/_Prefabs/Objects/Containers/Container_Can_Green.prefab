@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2122941154351846682}
   - component: {fileID: 754193692050813974}
   - component: {fileID: -1617105790287051029}
+  - component: {fileID: 3268319608004584085}
   m_Layer: 0
   m_Name: Container_Can_Green
   m_TagString: Untagged
@@ -167,6 +168,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3268319608004584085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602686734406209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d862c2b77ec58e4cb664b9321ddd196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2902112329034919629
 GameObject:
   m_ObjectHideFlags: 0

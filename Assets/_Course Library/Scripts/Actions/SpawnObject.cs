@@ -14,8 +14,10 @@ public class SpawnObject : MonoBehaviour
     public Transform parent = null;
 
     public int numberOfItems;
+    // If this variable is set true, then the item will be spawned when the game begins.
+    public bool initialSpawn = false;
 
-    // Position for where you want it to be spawned.
+    // Position for where you want the object to be spawned.
     public float x;
     public float y;
     public float z;
@@ -26,15 +28,6 @@ public class SpawnObject : MonoBehaviour
 
     public void Start()
     {
-        // Test code to make sure that the spawning works.
-        /*for (int i  = 0; i < numberOfItems; i++)
-        {
-            Vector3 position = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            Instantiate(originalObject, position, parent.rotation, parent); 
-            Debug.Log("Start");
-        }
-        */
-
         // The device that will be our main input. This assumes that 
         // we are only using one device.
         if (devices.Count > 0) {
@@ -51,12 +44,6 @@ public class SpawnObject : MonoBehaviour
     private void Update()
     {
         // This input needs to be replaced with an input from the button.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Spawn();
-            Debug.Log("Input is good");
-        }
-
         if(Input.GetKeyDown(KeyCode.B))
         {
             Spawn();
