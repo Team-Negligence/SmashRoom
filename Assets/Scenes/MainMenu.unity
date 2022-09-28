@@ -329,7 +329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 252032593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268069515}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: StartBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252032593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2760,7 +2772,7 @@ GameObject:
   - component: {fileID: 944143058}
   - component: {fileID: 944143057}
   m_Layer: 5
-  m_Name: Room1
+  m_Name: Cabin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2830,7 +2842,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944143058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268069515}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: DevCabinBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &944143058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4004,7 +4028,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ROOM 1
+  m_Text: CABIN
 --- !u!222 &1419131911
 CanvasRenderer:
   m_ObjectHideFlags: 0
