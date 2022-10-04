@@ -97,8 +97,6 @@ public class CollisionChecker : MonoBehaviour
             this.health = this.health - damage;
         }
 
-        Debug.Log("V:" + collisionVelocity.magnitude.ToString() + "; L:" + collisionObjectLethality.ToString() + "; H:" + this.health.ToString());
-
         if (this.health <= 0)
         {
             this.health = 0;
