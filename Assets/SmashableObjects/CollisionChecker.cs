@@ -5,8 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CollisionChecker : MonoBehaviour
 {
-    // Used if collided object has no lethality value
     private static readonly float DEF_LETHALITY = 1f;
+    private static readonly float INVINCE_FRAME_TIME = 0.25f;
 
     // This will be multiplied by the relative velocity to determine how much health a hit from this object should deal
     public float lethality;
@@ -24,10 +24,14 @@ public class CollisionChecker : MonoBehaviour
     // If this is null, object is just removed instead
     public GameObject destroyedVersion;
 
-    // used for falld damage
+    // used for fall damage
     private float fallTime = 0;
     private bool hasFallen = false;
     private bool isGrabbed = false;
+
+    // Damage ticks
+    private bool isInvincible = false;
+    private float invincibilityCounter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +51,11 @@ public class CollisionChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (this.health > 0)
+        {
+            refreshInvincibilityFrame();
+            UpdateFallDamage();
+        }
     }
 
     // On collision.
@@ -76,13 +84,47 @@ public class CollisionChecker : MonoBehaviour
 
             if (damage >= damage_threshold)
             {
-                health -= damage_threshold;
+                TryDamage(damage);
             }
 
             // Reset fall measurements
             hasFallen = false;
             fallTime = 0;
         }
+    }
+
+    public void refreshInvincibilityFrame()
+    {
+        if (isInvincible)
+        {
+            invincibilityCounter += Time.deltaTime;
+
+            if (invincibilityCounter >= INVINCE_FRAME_TIME)
+            {
+                isInvincible = false;
+                invincibilityCounter = 0;
+            }
+        }
+    }
+
+    // Attempt to add damage, prevented if within invincibility tick
+    // returns true if damage was dealt, false otherwise
+    public bool TryDamage(float damage)
+    {
+        if (!isInvincible)
+        {
+            isInvincible = true;
+            health -= damage;
+
+            // Also detroy object if 0 health
+            if (this.health <= 0)
+            {
+                this.health = 0;
+                DestroyCurrentObject();
+            }
+            return true;
+        }
+        return false;
     }
 
     public void ApplyCollisionDamage(Vector3 collisionVelocity, GameObject collisionObject)
@@ -94,13 +136,7 @@ public class CollisionChecker : MonoBehaviour
 
         if (damage > damage_threshold)
         {
-            this.health = this.health - damage;
-        }
-
-        if (this.health <= 0)
-        {
-            this.health = 0;
-            DestroyCurrentObject();
+            TryDamage(damage);
         }
     }
 
