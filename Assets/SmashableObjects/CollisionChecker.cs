@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class CollisionChecker : MonoBehaviour
 {
+    UnityEvent onObjectDamage;
+    UnityEvent onObjectDestroy;
+
     private static readonly float DEF_LETHALITY = 1f;
     private static readonly float INVINCE_FRAME_TIME = 0.25f;
 
@@ -33,9 +37,28 @@ public class CollisionChecker : MonoBehaviour
     private bool isInvincible = false;
     private float invincibilityCounter = 0;
 
+    // Sounds
+    public List<AudioClip> damageSounds;
+    public List<AudioClip> brokenSounds;
+
+    public float damageVolume = 1.0F;
+    public float breakVolume = 1.0F;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Events for when the object is damaged/destroyed
+        if (onObjectDamage == null)
+            onObjectDamage = new UnityEvent();
+        if (onObjectDestroy == null)
+            onObjectDestroy = new UnityEvent();
+
+        // Register local event listeners
+        onObjectDestroy.AddListener(() => { DestroyCurrentObject(); });
+        onObjectDestroy.AddListener(() => { PlayRandomSound(brokenSounds, breakVolume); });
+
+        onObjectDamage.AddListener(() => { PlayRandomSound(damageSounds, damageVolume); });
+
         // Register listeners for when item is grabbed/dropped
         var interactor = GetComponent<XRDirectInteractor>();
         interactor.selectEntered.AddListener(interactable =>
@@ -120,8 +143,10 @@ public class CollisionChecker : MonoBehaviour
             if (this.health <= 0)
             {
                 this.health = 0;
-                DestroyCurrentObject();
+                onObjectDestroy.Invoke();
             }
+
+            onObjectDamage.Invoke();
             return true;
         }
         return false;
@@ -149,4 +174,9 @@ public class CollisionChecker : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    private void PlayRandomSound(List<AudioClip> soundOptions, float volume)
+    {
+        AudioSource.PlayClipAtPoint(soundOptions[Random.Range(1, (soundOptions.Count - 1))], gameObject.transform.position, volume);
+    }    
 }
