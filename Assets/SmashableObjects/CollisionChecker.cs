@@ -61,14 +61,17 @@ public class CollisionChecker : MonoBehaviour
 
         // Register listeners for when item is grabbed/dropped
         var interactor = GetComponent<XRDirectInteractor>();
-        interactor.selectEntered.AddListener(interactable =>
+        if (interactor != null)
         {
-            isGrabbed = true;
-        });
-        interactor.selectExited.AddListener(interactable =>
-        {
-            isGrabbed = false;
-        });
+            interactor.selectEntered.AddListener(interactable =>
+            {
+                isGrabbed = true;
+            });
+            interactor.selectExited.AddListener(interactable =>
+            {
+                isGrabbed = false;
+            });
+        }
     }
 
     // Update is called once per frame
@@ -76,7 +79,7 @@ public class CollisionChecker : MonoBehaviour
     {
         if (this.health > 0)
         {
-            refreshInvincibilityFrame();
+            RefreshInvincibilityFrame();
             UpdateFallDamage();
         }
     }
@@ -116,7 +119,7 @@ public class CollisionChecker : MonoBehaviour
         }
     }
 
-    public void refreshInvincibilityFrame()
+    public void RefreshInvincibilityFrame()
     {
         if (isInvincible)
         {
