@@ -180,6 +180,6 @@ public class CollisionChecker : MonoBehaviour
 
     private void PlayRandomSound(List<AudioClip> soundOptions, float volume)
     {
-        AudioSource.PlayClipAtPoint(soundOptions[Random.Range(1, (soundOptions.Count - 1))], gameObject.transform.position, volume);
+        AudioSource.PlayClipAtPoint(soundOptions[Random.Range(0, (soundOptions.Count - 1))], gameObject.transform.position, volume);
     }    
 }
