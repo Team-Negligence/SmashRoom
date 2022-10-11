@@ -449,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145702218}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1170,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2984,7 +2984,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4082,9 +4082,10 @@ GameObject:
   - component: {fileID: 1313711684}
   - component: {fileID: 1313711683}
   - component: {fileID: 1313711682}
-  - component: {fileID: 1313711685}
   - component: {fileID: 1313711686}
-  m_Layer: 0
+  - component: {fileID: 1313711688}
+  - component: {fileID: 1313711687}
+  m_Layer: 31
   m_Name: XR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4150,8 +4151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1313711684}
-  m_TurnAmount: 30
-  m_DebounceTime: 0.5
+  m_TurnAmount: 45
+  m_DebounceTime: 0.2
   m_EnableTurnLeftRight: 1
   m_EnableTurnAround: 1
   m_LeftHandSnapTurnAction:
@@ -4194,50 +4195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1313711680}
---- !u!114 &1313711685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313711679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 1313711684}
-  m_MoveSpeed: 1
-  m_EnableStrafe: 1
-  m_UseGravity: 1
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
-  m_LeftHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 75f1b245-c357-48c8-9acb-8967bec9dda2
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  m_RightHandMoveAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 6bf6c732-e011-46b1-acc5-b649a4ec5f10
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!114 &1313711686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4285,6 +4242,43 @@ MonoBehaviour:
   m_DefaultActionMap: PauseMenu
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1313711687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313711679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75311166f97f1994184a5da363fb2010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSource: 4
+  speed: 1
+  gravity: -9.81
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  additionalHeight: 0.2
+--- !u!143 &1313711688
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313711679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.15
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1327324882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4292,6 +4286,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8810240259274194818, guid: 7a54361820b3f824fb39245cfe88d864,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8810240259274194818, guid: 7a54361820b3f824fb39245cfe88d864,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -4306,6 +4305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cricket_Bat_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810172710843480761, guid: 7a54361820b3f824fb39245cfe88d864,
+        type: 3}
+      propertyPath: m_Layer
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3810172710843480761, guid: 7a54361820b3f824fb39245cfe88d864,
         type: 3}
