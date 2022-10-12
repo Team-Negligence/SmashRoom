@@ -7,7 +7,9 @@ public class MenuController : MonoBehaviour
 {
     public void StartBtn()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main", LoadSceneMode.Additive);
+        // Unload other scene - really should be keeping track of what scene we're in
+        SceneManager.UnloadSceneAsync("Cabin");
     }
 
     public void ExitBtn()
@@ -17,6 +19,7 @@ public class MenuController : MonoBehaviour
 
     public void DevCabinBtn()
     {
-        SceneManager.LoadScene("Cabin");
+        SceneManager.LoadScene("Cabin", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("Main"); // as above
     }
 }
