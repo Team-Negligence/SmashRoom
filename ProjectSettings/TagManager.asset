@@ -12,6 +12,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Left Hand Physics
+  - Right Hand Physics
+  - Non Physics Hand Layer
   - 
   - 
   - 
@@ -33,11 +36,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HoldableObjects
+  - PlayerController
   m_SortingLayers:
   - name: Default
     uniqueID: 0
