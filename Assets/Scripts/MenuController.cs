@@ -19,4 +19,19 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Cabin");
     }
+
+    public void DevHallwayBtn()
+    {
+        SceneManager.LoadScene("Hallway");
+    }
+
+    public void DevMindfulnessBtn()
+    {
+        SceneManager.LoadScene("MindfulnessRoom");
+    }
+
+    public void DevClassroomBtn()
+    {
+        SceneManager.LoadScene("Classroom");
+    }
 }
