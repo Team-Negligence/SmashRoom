@@ -1,0 +1,7 @@
+newmtl Plaster_Bricks
+bump PaintedPlaster014_2K_NormalGL.jpg
+disp PaintedPlaster014_2K_Displacement.jpg
+map_Kd PaintedPlaster014_2K_Color.jpg
+Kd 1 1 1
+d 1
+

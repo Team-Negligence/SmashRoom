@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.17500073, y: -0.1749999, z: 0.19500037}
   m_LocalScale: {x: 25, y: 25, z: 25}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5588761933278465379}
   m_RootOrder: 0
@@ -97,12 +98,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -135,6 +138,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0.2038, z: 0.007}
   m_LocalScale: {x: -0.04, y: 0.04, z: 0.04}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2904815113517342765}
   m_Father: {fileID: 8710345226670574489}
@@ -159,6 +163,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -215,6 +220,7 @@ GameObject:
   - component: {fileID: 5714653689696158780}
   - component: {fileID: 7541963710993527030}
   - component: {fileID: 4354430928642423228}
+  - component: {fileID: 971359213484130228}
   m_Layer: 0
   m_Name: Mirror_Square_Black
   m_TagString: Untagged
@@ -232,6 +238,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5588761933278465379}
   m_Father: {fileID: 0}
@@ -256,6 +263,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -299,3 +307,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4382352, y: 0.40634015, z: 0.02274001}
   m_Center: {x: 0, y: 0.20459141, z: 0.0018627294}
+--- !u!114 &971359213484130228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334628511856218403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d862c2b77ec58e4cb664b9321ddd196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lethality: 0
+  fall_sensitivity: 10
+  damage_threshold: 1
+  health: 10
+  destroyedVersion: {fileID: 4019437135193685162, guid: 1c3f5a03d2b6e594cb3b97a345ce2e0d,
+    type: 3}
+  damageSounds: []
+  brokenSounds: []
+  damageVolume: 1
+  breakVolume: 1

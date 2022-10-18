@@ -5,8 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class AutoDespawn : MonoBehaviour
 {
-    public float maxDespawnTime;
-    public float minDespawnTime;
+    public float maxDespawnTime = 15;
+    public float minDespawnTime = 3;
 
     private float despawnTime;
     private float timeAlive = 0;
