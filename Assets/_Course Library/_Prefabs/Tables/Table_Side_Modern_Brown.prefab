@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.19080894, z: 0, w: 0.9816273}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320493855522251927}
   m_RootOrder: 1
@@ -71,6 +72,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320493855522251927}
   m_RootOrder: 0
@@ -99,8 +101,10 @@ GameObject:
   - component: {fileID: 1361040248705281633}
   - component: {fileID: 2687726969983427012}
   - component: {fileID: 191488993182455054}
+  - component: {fileID: 3499799156691554260}
+  - component: {fileID: 8340293724533596760}
   m_Layer: 0
-  m_Name: Table_Side_Modern_Brown_Prefab
+  m_Name: Table_Side_Modern_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,6 +120,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 320493855522251927}
   - {fileID: 7281046541352974988}
@@ -141,6 +146,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -171,6 +177,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3499799156691554260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848923676853286107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d862c2b77ec58e4cb664b9321ddd196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lethality: 10
+  fall_sensitivity: 2
+  damage_threshold: 1
+  health: 20
+  destroyedVersion: {fileID: 3223988199625259046, guid: 1a6e25deb4b99e7489b87520314af49c,
+    type: 3}
+  damageSounds:
+  - {fileID: 8300000, guid: 5256a553e1ef7864f9be71e3dc08c7a2, type: 3}
+  - {fileID: 8300000, guid: 34100f8dae8228443892b4ef4100f120, type: 3}
+  - {fileID: 8300000, guid: 497003e460c23b245a33e5ffe5208f38, type: 3}
+  - {fileID: 8300000, guid: d146eb94dc3eb904587ef86a478665f0, type: 3}
+  brokenSounds:
+  - {fileID: 8300000, guid: 42d6b217c60881648af7d4bed96eecd2, type: 3}
+  - {fileID: 8300000, guid: de04bd0afba823344bad25e9c037f63c, type: 3}
+  damageVolume: 1
+  breakVolume: 1
+--- !u!54 &8340293724533596760
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848923676853286107}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3887291969256934627
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +248,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.38381183, z: 0, w: 0.92341137}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320493855522251927}
   m_RootOrder: 2
@@ -242,6 +293,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.5849577, z: 0, w: 0.8110638}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 320493855522251927}
   m_RootOrder: 3
@@ -287,6 +339,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1361040248705281633}
   m_RootOrder: 1
@@ -343,6 +396,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5531010997799608801}
   - {fileID: 8815536520606383696}

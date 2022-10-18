@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartBtn()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Hallway");
     }
 
     public void ExitBtn()

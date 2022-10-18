@@ -182,7 +182,7 @@ public class CollisionChecker : MonoBehaviour
     {
         if (soundOptions.Count > 0)
         {
-            AudioSource.PlayClipAtPoint(soundOptions[Random.Range(0, (soundOptions.Count - 1))], gameObject.transform.position, volume);
+            AudioSource.PlayClipAtPoint(soundOptions[Random.Range(0, soundOptions.Count)], gameObject.transform.position, volume);
         }
     }    
 }
