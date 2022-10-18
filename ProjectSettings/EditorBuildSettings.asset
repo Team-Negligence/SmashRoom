@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MindfulnessRoom.unity
     guid: df9514c5f66bf2545b33318b2132c3fd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Hallway.unity
     guid: 7ba8ff557a8b3354b995d0fb92747b08
   - enabled: 1

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130632182304239080}
   - component: {fileID: 7630429971526633742}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Leg_Collider_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252858123048277310}
   - component: {fileID: 323971437730659707}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Leg_Collider_BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2701506023133613682}
   - component: {fileID: 7978130359584466470}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Leg_Collider_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6698576341577669610}
   - component: {fileID: 788400549414157068}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Back_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 2401580668666477774}
   - component: {fileID: 6042530907190004151}
   - component: {fileID: 6257122315875079859}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Chair_Traditional_Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,8 +306,14 @@ MonoBehaviour:
   health: 20
   destroyedVersion: {fileID: 7624059677019415055, guid: 681a1c157ad44394d899acb1bec4212d,
     type: 3}
-  damageSounds: []
-  brokenSounds: []
+  damageSounds:
+  - {fileID: 8300000, guid: 5256a553e1ef7864f9be71e3dc08c7a2, type: 3}
+  - {fileID: 8300000, guid: 34100f8dae8228443892b4ef4100f120, type: 3}
+  - {fileID: 8300000, guid: 497003e460c23b245a33e5ffe5208f38, type: 3}
+  - {fileID: 8300000, guid: d146eb94dc3eb904587ef86a478665f0, type: 3}
+  brokenSounds:
+  - {fileID: 8300000, guid: 42d6b217c60881648af7d4bed96eecd2, type: 3}
+  - {fileID: 8300000, guid: de04bd0afba823344bad25e9c037f63c, type: 3}
   damageVolume: 1
   breakVolume: 1
 --- !u!114 &6257122315875079859
@@ -435,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508787090791308501}
   - component: {fileID: 5458439748602194782}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Seat_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9007089496121017325}
   - component: {fileID: 3438196549572910010}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Leg_Collider_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -201,8 +201,14 @@ MonoBehaviour:
   health: 20
   destroyedVersion: {fileID: 1366879545380528741, guid: b58b2407f7a516844adde737eb3e35dc,
     type: 3}
-  damageSounds: []
-  brokenSounds: []
+  damageSounds:
+  - {fileID: 8300000, guid: 5256a553e1ef7864f9be71e3dc08c7a2, type: 3}
+  - {fileID: 8300000, guid: 34100f8dae8228443892b4ef4100f120, type: 3}
+  - {fileID: 8300000, guid: 497003e460c23b245a33e5ffe5208f38, type: 3}
+  - {fileID: 8300000, guid: d146eb94dc3eb904587ef86a478665f0, type: 3}
+  brokenSounds:
+  - {fileID: 8300000, guid: 42d6b217c60881648af7d4bed96eecd2, type: 3}
+  - {fileID: 8300000, guid: de04bd0afba823344bad25e9c037f63c, type: 3}
   damageVolume: 1
   breakVolume: 1
 --- !u!54 &2791002823176027251

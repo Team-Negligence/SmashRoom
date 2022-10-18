@@ -265,7 +265,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5886725122310526079, guid: aa542ce8ee9f0a949b16c7a5f7856136, type: 3}
 --- !u!54 &2699379003223177797
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lethality: 10
-  fall_sensitivity: 5
+  fall_sensitivity: 1
   damage_threshold: 1
   health: 10
   destroyedVersion: {fileID: 2250785849615643039, guid: c00fcf2410db9c94abe2275a9c584b01,
