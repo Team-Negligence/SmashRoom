@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: -0.06871072, y: 0.34415424, z: 0.0059526195, w: 0.9363767}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3956264462789570733}
   m_RootOrder: 2
@@ -55,6 +56,8 @@ GameObject:
   - component: {fileID: 3956264462789570733}
   - component: {fileID: 92501930695065352}
   - component: {fileID: 2786696062831496130}
+  - component: {fileID: 7519255104130786955}
+  - component: {fileID: 7131401994418707079}
   m_Layer: 0
   m_Name: Table_Dining_Modern_Dark
   m_TagString: Untagged
@@ -72,6 +75,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3016537617170886942}
   - {fileID: 8131435291817692320}
@@ -100,6 +104,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -130,6 +135,44 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7519255104130786955
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4444113015199148567}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7131401994418707079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4444113015199148567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d862c2b77ec58e4cb664b9321ddd196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lethality: 0
+  fall_sensitivity: 5
+  damage_threshold: 5
+  health: 50
+  destroyedVersion: {fileID: 6815914769983055320, guid: 3cfa83caa1c0eb94bbdf267bc86b7d42,
+    type: 3}
+  damageSounds: []
+  brokenSounds: []
+  damageVolume: 1
+  breakVolume: 1
 --- !u!1 &5516459263271658053
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +200,7 @@ Transform:
   m_LocalRotation: {x: -0.018835, y: 0.9975605, z: 0.066346355, w: 0.010789837}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3956264462789570733}
   m_RootOrder: 3
@@ -201,6 +245,7 @@ Transform:
   m_LocalRotation: {x: -0.0665241, y: -0.0012134463, z: -0.018197255, w: 0.99761814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3956264462789570733}
   m_RootOrder: 1
@@ -245,6 +290,7 @@ Transform:
   m_LocalRotation: {x: 0.0063722176, y: 0.93425703, z: 0.068673074, w: -0.34986752}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3956264462789570733}
   m_RootOrder: 4
@@ -290,6 +336,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3956264462789570733}
   m_RootOrder: 0
