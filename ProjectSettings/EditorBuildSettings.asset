@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2677d14a58cae4a328c22e047cea57d9
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Cabin.unity
+    guid: e61da707999f74b36891191447466f3b
+  - enabled: 1
+    path: Assets/Scenes/MindfulnessRoom.unity
+    guid: df9514c5f66bf2545b33318b2132c3fd
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 7ba8ff557a8b3354b995d0fb92747b08
+  - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: f1fad57c20d2304459a19a5ee1b84b14
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ed72be55522c8448bae8b0d66fa21adf,
       type: 2}
