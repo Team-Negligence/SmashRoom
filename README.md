@@ -18,3 +18,19 @@ VR Smash Room by Team Negligence
 7. Select Android in the left pane, and then click 'Switch Platform'. This step may take a few minutes.
 8. Plug in Meta Quest, and select 'yes' on its USB debugging prompt.
 9. Select Build and Run. In the future, you can simply press File > Build (Ctrl+B) to compile and upload to the headset.
+
+
+# Compiling for Windows
+## Prerequisites
+1. Download and install [Unity Hub](https://unity3d.com/get-unity/download)
+2. Install Unity 2021.3.8f1 through the hub.
+4. On Windows, install the relevant VR software and launch it. (Oculus software, Steam VR, etc)
+
+## Compiling
+1. Import the project into Unity Hub, and open it.
+5. Open File > Build Settings (Ctrl+Shift+B).
+6. Verify that scenes are present in the top pane, and that the MainMenu is the top scene.
+7. Select Windows, Mac, Linux in the left pane if not already selected, and then click 'Switch Platform'. This step may take a few minutes.
+8. Plug in your VR device.
+9. Select Build, and select an appropriate output directory.
+10. Once built, run SmashRoom.exe
