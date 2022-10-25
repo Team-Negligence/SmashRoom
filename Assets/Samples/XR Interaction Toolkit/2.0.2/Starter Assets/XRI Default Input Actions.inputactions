@@ -50,6 +50,56 @@
             ]
         },
         {
+            "name": "Reset",
+            "id": "897643b4-5ca8-45b3-9bc0-ab00bbf3884a",
+            "actions": [
+                {
+                    "name": "Reset to MainMenu",
+                    "type": "Button",
+                    "id": "954f528f-af45-4db4-97df-068332c3d979",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "966129b5-0c75-4c0d-ab1e-2b43c93ac2aa",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset to MainMenu",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "a9b8ec04-3f0c-48f6-8bd9-c12636f87880",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset to MainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "e9ea87bc-e3fc-4158-be30-fed0734ca275",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset to MainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
             "name": "XRI LeftHand",
             "id": "5fe596f9-1b7b-49b7-80a7-3b5195caf74d",
             "actions": [

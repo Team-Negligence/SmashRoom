@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 3924701580035781892}
   - component: {fileID: 3924701580035781898}
   - component: {fileID: 3924701580035781893}
+  - component: {fileID: 2739606627224704046}
   m_Layer: 31
   m_Name: XR Rig
   m_TagString: Player
@@ -248,6 +249,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 254cf513-0c12-4ec7-84ae-ad43f5a85881
     m_ActionName: PauseMenu/MenuPressed
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b6be643f-4939-4083-aa94-a6f7479e849a
+    m_ActionName: Reset/Reset to MainMenu
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PauseMenu
@@ -290,6 +295,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483647
   additionalHeight: 0
+--- !u!114 &2739606627224704046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924701580035782013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be144feeb53a4564ca51242da8cce688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference: {fileID: 2409032142114488941, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &3924701580368355144
 GameObject:
   m_ObjectHideFlags: 0
